@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>To-Do List</h1>
+  <div class="col">
+
+      <input type="text" placeholder="Add Todo" [(ngModel)]="todoItem" value={{todoItem}} />
+
+      <button type="submit" class="btn btn-primary" (click)="addTodo()">
+          <i class="material-icons">add</i>
+      </button>
+  </div>
+
+</div>
+
