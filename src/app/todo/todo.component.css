@@ -1,4 +1,44 @@
+.container-fluid {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.color-dark {
+    background-color:#000080;
+}
+
+.color-light {
+    background-color: #0085FF;
+}
+
+.col {
+    padding: .4em 1.3em;
+}
+
+input.txt {
+    border: 0;
+    padding: 1em;
+    width: 80%;
+    margin-bottom: 2em;
+}
+
+.todo-item {
+    background: #3fa0e1;
+    padding: .5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#list {
+    background-color: #FFD100;
+}
+
+.header {
+    margin-top: 50px;
+}
+
 button {
     height: 30px;
     width: 30px;
+    margin-bottom: 4px;
 }

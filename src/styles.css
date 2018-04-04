@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background: #f0ead6;
+    padding: 3em;
+    font-family: 'Roboto', 'Arial';
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 30px;
+}
+
+ul li a {
+    font-size: 1.5em;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button i {
+    position: relative;
+    transform: translate(-90%, -40%);
+    width: 10px;
+    height: 10px;
+}
+
+li span i {
+    transform: translate(0%, 20%);
+    font-size: 1.5em;
+}

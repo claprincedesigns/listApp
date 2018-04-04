@@ -7,36 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
   title = 'To-Do List';
+  todoCount: number;
   newTodo: string;
-  todos = [
-    {id: 0},
-    {name: 'string'}
-  ];
+  todos = ['Milk'];
 
 
-  constructor() {
-    this.todos = [];
-    this.newTodo = '';
+  constructor() {}
+
+  ngOnInit() {
+    this.todoCount = this.todos.length;
   }
 
   addTodo() {
     this.todos.push(this.newTodo);
     this.newTodo = '';
+    this.todoCount = this.todos.length;
   }
   
-  deleteTodo(name) {
-    for(let i = 0; i < this.todos.length; i++) {
-      if(this.todos[i]["name"] == name){
-        this.todos.splice(i, 1);
-      }
+  deleteTodo(i) {
+      this.todos.splice(i, 1);
     }
 
      // this.todos = this.todos.filter(todo => todo.id !== id);
-     // this.todos.splice(id, 1);
-  }
+     
+      /*for(let i = 0; i < this.todos.length; i++) {
+      if(this.todos[i]["name"] == name){
+        this.todos.splice(i, 1);
+      } */
 
-  ngOnInit() {
-
-  }
 
 }

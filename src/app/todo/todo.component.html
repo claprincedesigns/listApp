@@ -1,21 +1,26 @@
-<div class="container-fluid">
-  <h1>{{ title }}</h1>
-  <div class="col">
-      <input type="text" 
-      placeholder="Add Todo" 
-      [(ngModel)]="newTodo" />
+<div class="container-fluid color-dark">
 
-      <button type="submit" class="btn btn-primary" 
-      (click)="addTodo(newTodo.value)">
-          <i class="material-icons">add</i>
-      </button>
+    <div id="list">
+       <div class="header color-light">
+          <h1>{{ title }}</h1>
+          <p> You have {{ todoCount }} items in your list</p>
+       </div>
+    <div class="col">
+        <input type="text" placeholder="Add Todo" 
+        [(ngModel)]="newTodo"
+        class="txt" />
 
-      <ul>
-          <li *ngFor="let todo of todos"> 
-            {{ todo }}
-            <span (click)="deleteTodo(todo.id)"><i class="material-icons">delete</i> </span>
-        </li>
-      </ul>
-      
+        <button type="submit" class="btn btn-primary" 
+        (click)="addTodo()">
+            <i class="material-icons">add</i>
+        </button>
+
+        <ul>
+            <li *ngFor="let todo of todos; let i = index" class="todo-item"> 
+                {{ todo }}
+                <span (click)="deleteTodo(i)"><i class="material-icons">delete</i> </span>
+            </li>
+        </ul>
+    </div> 
 </div>
 
