@@ -12,15 +12,15 @@
 
         <button type="submit" class="btn btn-primary" 
         (click)="addTodo()">
-            <i class="material-icons">add</i>
+            <i class="material-icons" style="font-size: 40px;">add</i>
         </button>
 
         <ul>
             <li *ngFor="let todo of todos; let i = index" class="todo-item"> 
                 {{ todo }}
-                <span (click)="deleteTodo(i)"><i class="material-icons">delete</i> </span>
+                <span (click)="deleteTodo(i)"><i class="material-icons" >delete</i> </span>
             </li>
         </ul>
     </div> 
 </div>
-
+</div>

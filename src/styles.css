@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-    background: #f0ead6;
+    background: #000080;
     padding: 3em;
     font-family: 'Roboto', 'Arial';
     color: #fff;
@@ -16,6 +16,7 @@ ul {
 
 ul li {
     margin-right: 30px;
+    margin-top: 5px; 
 }
 
 ul li a {
@@ -29,12 +30,13 @@ a {
 
 button i {
     position: relative;
-    transform: translate(-90%, -40%);
+    transform: translate(-140%, -10%);
     width: 10px;
     height: 10px;
 }
 
 li span i {
-    transform: translate(0%, 20%);
-    font-size: 1.5em;
+    transform: translate(20%);
+    float: right;
+    font-size: 40px;
 }
