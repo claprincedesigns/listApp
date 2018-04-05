@@ -11,8 +11,7 @@ export class TodoComponent implements OnInit {
   newTodo: string;
   todos = ['Milk'];
 
-
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.todoCount = this.todos.length;
