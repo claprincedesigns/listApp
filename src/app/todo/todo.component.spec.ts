@@ -35,7 +35,7 @@ describe('TodoComponent', () => {
   }));
 
   it('should display an item in list for each todos', () => {
-    component.todos = ['Rubbing Lotion', 'Basketball', 'Cake'];
+    component.todos = [];
     fixture.detectChanges();
 
     expect(compiled.querySelectorAll('li').length).toEqual(3);
