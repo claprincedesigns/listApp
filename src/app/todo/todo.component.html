@@ -16,9 +16,11 @@
       </button>
 
       <ul>
-        <li *ngFor="let todo of todos; let i = index" class="todo-item"> 
-          {{ todo.name }}
-          <span (click)="deleteTodo(i)"><i class="material-icons" >delete</i> </span>
+        <li *ngFor="let todo of todos; let i = index" class="todo-item"
+        [ngClass]="{isEditing: todo.isEditing}"> 
+          <label (click)="todo.isEditing = true">{{ todo.name }}</label>
+          <span (click)="deleteTodo(i)"><i class="material-icons" >delete</i></span>
+          <input class="isEditing" value="{{todo.name}}">
         </li>
         <li><app-todo-item></app-todo-item></li>
         
