@@ -10,6 +10,7 @@ export class TodoComponent implements OnInit {
   title = 'To-Do List';
   todoCount: number;
   newTodo: string;
+  isEditing: boolean;
   todos = [{
     id: 0,
     name: 'milk'
@@ -43,11 +44,6 @@ export class TodoComponent implements OnInit {
     // add an click to edit or icon(bonus)
     // flag isEditing boolean to check the state of the item
     // if isEditing is true show input box; if false don't show it
-    if(todos.isEditing === true){
-      console.log('Can you see me!');
-    } else {
-      console.log('Do you know me');
-    }
     // shouldn't save if the string is empty
     // can cancel edits
     // and test
