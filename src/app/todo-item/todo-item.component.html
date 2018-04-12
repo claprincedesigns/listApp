@@ -1,1 +1,10 @@
-<p>This works!</p>
+
+<span *ngIf="!isEditing">{{ todo.name }}</span>
+<!--Input that's going to show when you click the button-->
+<input *ngIf="isEditing" class="edit"
+  [(ngModel)]="todo.name"
+  (keyup.enter)="isEditing = false">
+
+<!--Icons for the Edit and the Delete-->
+<span (click)="delete(i)"><i class="material-icons">delete</i></span>
+<span (click)="isEditing = true"><i class="material-icons">mode_edit</i></span>
