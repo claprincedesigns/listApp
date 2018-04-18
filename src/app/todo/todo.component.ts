@@ -31,8 +31,8 @@ export class TodoComponent implements OnInit {
     this.idCounter++;
   }
 
-  // deleteTodo() {
-  //     this.todos.splice(i, 1);
-  //     this.todoCount = this.todos.length;
-  // }
+  deleteTodo(i) {
+      this.todos.splice(i, 1);
+      this.todoCount = this.todos.length;
+  }
 }

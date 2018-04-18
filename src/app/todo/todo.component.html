@@ -7,7 +7,7 @@
      </div>
   <div class="col">
       <input type="text" placeholder="Add Todo" 
-      [(ngModel)]="newTodo"
+      [(ngModel)]="newTodo" (keyup.enter)="addTodo()"
       class="txt" />
 
       <button type="submit" class="btn btn-primary" 
