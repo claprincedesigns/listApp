@@ -17,6 +17,7 @@
 
       <ul>
         <li *ngFor="let todo of todos; let i = index" class="todo-item">
+            <span (click)="deleteTodo(i)"><i class="material-icons">delete</i></span>
           <app-todo-item [todo]="todo"></app-todo-item>
         </li>
     </ul>

@@ -1,10 +1,11 @@
 
+<!--ngIf is saying that if isEditing is equal to false we're just showing the name of the item-->
 <span *ngIf="!isEditing">{{ todo.name }}</span>
-<!--Input that's going to show when you click the button-->
+<!--Input that's going to show when you click the button, it turns isEditing from false to true which then shows the input field-->
 <input *ngIf="isEditing" class="edit"
   [(ngModel)]="todo.name"
   (keyup.enter)="isEditing = false">
 
 <!--Icons for the Edit and the Delete-->
-<span (click)="deleteTodo(todo)"><i class="material-icons">delete</i></span>
+<!-- <span><i class="material-icons">delete</i></span> -->
 <span (click)="isEditing = true"><i class="material-icons">mode_edit</i></span>

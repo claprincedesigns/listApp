@@ -10,7 +10,10 @@ export class TodoComponent implements OnInit {
   title = 'To-Do List';
   todoCount: number;
   newTodo: string;
-  todos = [];
+  todos = [{
+    id: 0,
+    name: 'milk'
+  }];
 
   constructor() { }
 
@@ -24,8 +27,7 @@ export class TodoComponent implements OnInit {
       name: this.newTodo
     };
     this.todos.push(todo);
-
-
+    
     this.newTodo = '';
     this.todoCount = this.todos.length;
     this.idCounter++;
