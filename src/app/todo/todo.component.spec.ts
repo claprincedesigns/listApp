@@ -28,17 +28,17 @@ describe('TodoComponent', () => {
   }));
 
   it('should display the count of todos', async(() => {
-    component.todoCount = 5;
+    component.todoCount = 1;
     fixture.detectChanges();
 
-    expect(compiled.querySelector('.header p').textContent).toContain('5');
+    expect(compiled.querySelector('.header p').textContent).toContain('1');
   }));
 
   it('should display an item in list for each todos', () => {
     component.todos = [];
     fixture.detectChanges();
 
-    expect(compiled.querySelectorAll('li').length).toEqual(3);
-    expect(compiled.querySelectorAll('li')[0].textContent).toContain('Rubbing Lotion');
+    expect(compiled.querySelectorAll('li').length).toEqual(1);
+    expect(compiled.querySelectorAll('li')[0].textContent).toContain('milk');
   });
 });
