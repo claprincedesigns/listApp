@@ -27,7 +27,6 @@ export class TodoComponent implements OnInit {
       name: this.newTodo
     };
     this.todos.push(todo);
-    
     this.newTodo = '';
     this.todoCount = this.todos.length;
     this.idCounter++;
