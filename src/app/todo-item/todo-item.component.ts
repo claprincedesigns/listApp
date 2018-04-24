@@ -6,12 +6,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  @Input()
-  todo: any;
+  @Input() todo: any;
 
-  
-  @Output()
-  editing: EventEmitter<any> = new EventEmitter();
+  @Input() index: number;
+   
+  @Output() deleting: EventEmitter<any> = new EventEmitter();
 
   isEditing = false;
 
@@ -20,10 +19,8 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  emitEditing() {
-    this.editing.emit(this.todo);
-    this.isEditing = false;
+  emitDeleting() {
+    this.deleting.emit(this.index);
   }
-
 
 }

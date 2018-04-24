@@ -14,10 +14,14 @@
 
       <ul>
         <li *ngFor="let todo of todos; let i = index" class="todo-item">
+<<<<<<< HEAD
           <span (click)="deleteTodo(i)">
             <i class="material-icons">delete</i>
           </span>
           <app-todo-item [todo]="todo"></app-todo-item>
+=======
+          <app-todo-item [todo]="todo" [index]="i" (deleting)=deleteTodo($event)></app-todo-item>
+>>>>>>> 83cddde21aa97f8405421f86b2840caf3b74deb3
         </li>
       </ul>
     </div>
