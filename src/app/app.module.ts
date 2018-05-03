@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
@@ -30,6 +31,7 @@ import { LoginComponent } from './login/login.component';
         component: TodoComponent
       }
     ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
